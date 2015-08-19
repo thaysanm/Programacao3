@@ -1,0 +1,177 @@
+<html>
+<head>
+
+    <style>
+        html, body {
+            margin:0;
+            padding:0;
+        }
+
+        .captchaWrapper {
+            height:100px;
+            position: relative;
+            text-align: center;
+        }
+        #recaptcha_image{
+            border:1px solid #bfbfbf;
+            width: 274px  !important;
+            position: relative;
+            margin: 10px auto;
+        }
+
+        #recaptcha_image> img {
+            width: 274px !important;
+        }
+        #controls{
+            width: 274px  !important;
+            display:inline;
+        }
+        #controls a{
+            color: #026698;
+        }
+
+        .clear {
+            clear:both;
+        }
+        .botHeader {
+            background: url(http://static.4shared.com/images/indexPage/header.png?ver=3887086628) left top repeat-x;
+            border-bottom: 1px #5e7d99 solid;
+            height: 59px;
+            position: relative;
+            text-align: center;
+        }
+
+        .logo {
+            position: relative;
+            width: 150px;
+            height: 40px;
+            margin: 0 auto;
+            background: url(http://static.4shared.com/images/newUi/header-logo.png?ver=541266950) left top no-repeat;
+        }
+
+        .site4sync .botHeader {
+          background: url(http://static.4shared.com/4sync.com/images/d1/blue_bg.png?ver=2805967996) left top repeat-x;
+          border-bottom: 1px #cedaea solid;
+        }
+
+        .site4sync .logo {
+          width: 115px;
+          height: 53px;
+          background: url(http://static.4shared.com/4sync.com/images/d1/4sync_logo.png?ver=1580166828) left bottom no-repeat;
+        }
+
+        .botContent {
+            padding: 15px;
+            font-family: "Lucida Sans Unicode", "Lucida Grande", Arial, sans-serif;
+            text-align: center;
+        }
+
+        .botContent h1 {
+            font-size: 24px;
+        }
+
+        .botContent h2 {
+            font-size: 16px;
+        }
+
+        .botContent h2 span {
+            color: #0574b5;
+            text-decoration: underline;
+        }
+        .submit-gray {
+            border:1px #bcbcbc solid;
+            background: #f5f5f5; /* Old browsers */
+            background: -moz-linear-gradient(top, #f5f5f5 0%, #e6e6e6 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f5f5f5), color-stop(100%,#e6e6e6)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, #f5f5f5 0%,#e6e6e6 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, #f5f5f5 0%,#e6e6e6 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, #f5f5f5 0%,#e6e6e6 100%); /* IE10+ */
+            background: linear-gradient(top, #f5f5f5 0%,#e6e6e6 100%); /* W3C */
+            -moz-box-shadow: inset 0px 0px 0px 1px #ffffff;
+            -webkit-box-shadow: inset 0px 0px 0px 1px #ffffff;
+            box-shadow: inset 0px 0px 0px 1px #ffffff;
+            color: #50555b;
+            padding:6px 0px 7px 0px;
+            text-align: center;
+            text-shadow:1px 1px 0 #fff;
+            cursor: pointer;
+            width:100px;
+            border-radius: 5px;
+            margin-top:10px;
+        }
+
+        .submit-gray:hover {
+            background: #f2f2f2; /* Old browsers */
+            background: -moz-linear-gradient(top,  #f2f2f2 0%, #dddddd 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2f2f2), color-stop(100%,#dddddd)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top,  #f2f2f2 0%,#dddddd 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top,  #f2f2f2 0%,#dddddd 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top,  #f2f2f2 0%,#dddddd 100%); /* IE10+ */
+            background: linear-gradient(top,  #f2f2f2 0%,#dddddd 100%); /* W3C */
+            color: black;
+        }
+
+        .input-light-small {
+            background:#ffffff;
+            border:1px #d5d9dd solid;
+            border-top:1px #8097ab solid;
+            border-bottom:1px #d9dce1 solid;
+            padding:2px 5px 2px 5px;
+            -moz-box-shadow:inset 1px -1px 2px #e3e8ec, 1px 1px 0px #fff;
+            -webkit-box-shadow:inset 1px -1px 2px #e3e8ec, 0px 1px 0px #fff;
+            box-shadow:inset 1px -1px 2px #e3e8ec, 0px 1px 0px #fff;
+            width: 264px;
+            position: relative;
+            margin:0 auto;
+        }
+
+        .input-light-small input:focus{outline:0px aqua none;}
+
+        .input-light-small input {border: none; outline:none; width:264px;}
+
+    </style>
+
+</head>
+<body class="site4shared notPremiumUser IE8 pageCaptcha">
+
+<div class="botHeader">
+    <div class="logo"></div>
+</div>
+
+<div class="botContent">
+<h1>We have discovered suspicious activity from your computer network.</h1>
+<h2>Please, enter the code below to continue</h2>
+
+<form action="" method="post">
+<input type="hidden" name='botCaptcha_origurl' value='http://www.4shared.com/web/cdn/popular/download/tewMXTpoba?contDisp=attachment%3B+filename%3D%22Na+Maldade+-+Sorriso+Maroto+e+Anitta+dvd+2014.mp3%22%3B+filename*%3Dutf-8%27%27Na%2520Maldade%2520-%2520Sorriso%2520Maroto%2520e%2520Anitta%2520dvd%25202014.mp3&amp;contType=audio%2Fmpeg&amp;cdnh=ec81132ac0291b54de11769fc085f4dd&amp;d3c=fdstewMXTpoba%3DINITIALIZED%3B+domain%3D.4shared.com%3B+expires%3DFri%2C+14-Aug-2015+13%3A11%3A11+GMT%3B+path%3D%2F&amp;sh=bf88b75f16eb391776b863c4437d1ce3' />
+
+<div id="recaptcha_widget" style="display: none;">
+    <div class="captchaWrapper">
+        <div id="recaptcha_image"></div>
+        <div id="controls">
+            <a href="javascript:Recaptcha.reload()">Recarregar imagem</a> | <a href="javascript:Recaptcha.showhelp()">Ajuda</a>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <h2 class="recaptcha_only_if_incorrect_sol" style="color:red">Código incorreto digitado. Tente novamente.</h2>
+
+    <div class="input-light-small"><input type="text"  class="input-gray-big wide round4" id="recaptcha_response_field" name="recaptcha_response_field"/></div>
+
+    <div>
+        <input id="submitCommBtn" type="submit" value="Confirmar" class="field2 submit-gray round4"  />
+    </div>
+    <div class="clear"></div>
+</div>
+
+<script type="text/javascript">
+var RecaptchaOptions = {theme:'custom',lang:'en',custom_theme_widget:'recaptcha_widget'};
+</script>
+<script type="text/javascript" src="http://www.google.com/recaptcha/api/challenge?k=6Lc-TgwAAAAAALAAwEdL3ahmchYPnZI0XvSimWGm"></script>
+</form>
+
+
+    <h2 class="botSupport">If you think we are challenging you by mistake please contact our <a href="/web/helpCenter">support</a></h2>
+
+</div>
+</body>
+</html>
